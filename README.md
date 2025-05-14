@@ -10,4 +10,3 @@ This is a simple Express.js application that serves book information through dif
 - View instructions at `/book`
 - Get book details by number at `/book/:number`
 
-## 📦 Project Structure
