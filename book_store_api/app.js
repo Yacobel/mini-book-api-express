@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const autore = require("./router/authors");
-app.use(express.json())
+const book = require("./router/bookrouter");
+app.use(express.json());
 
 mongoose
   .connect("mongodb://localhost/bookapi")
@@ -11,9 +12,9 @@ mongoose
     console.log("errore in conection", e);
   });
 
-app.use("", autore);
-app.use("", autore);
+app.use("/authore", autore);
+app.use("/book", book);
 
-app.listen(5000,() => {
+app.listen(5000, () => {
   console.log("im lestning in prt 5000");
 });
